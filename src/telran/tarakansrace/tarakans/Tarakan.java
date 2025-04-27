@@ -19,6 +19,7 @@ public class Tarakan implements Runnable{
             if (winner) {
                 return;
             }
+            System.out.println("Tarakan#" + (number + 1) + " at ring " + (i + 1));
             try {
                 Thread.sleep(2 + new Random().nextInt(4));
             } catch (InterruptedException e) {
