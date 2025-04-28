@@ -25,5 +25,15 @@ public class TarakanRaceAppl {
         for (Thread thread : threads) {
             thread.start();
         }
+        for (Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("Race has finished");
+        System.out.println("Congratulations to Tarakan#" + (Tarakan.getWinner() + 1) + " (winner)");
     }
 }
