@@ -16,12 +16,10 @@ public class Tarakan implements Runnable{
     public void run() {
         System.out.println("Tarakan#" + (number + 1) + " has started");
         for (int i = 0; i < distance; i++) {
-            if (winner) {
-                return;
-            }
-            System.out.println("Tarakan#" + (number + 1) + " at ring " + (i + 1));
+                       System.out.println("Tarakan#" + (number + 1) + " at ring " + (i + 1));
             try {
                 Thread.sleep(2 + new Random().nextInt(4));
+                System.out.println("Tarakan#" + (number + 1) + " has finished");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
